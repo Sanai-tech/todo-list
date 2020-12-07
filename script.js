@@ -14,9 +14,22 @@ document.querySelector("input").onkeydown=function(){
 }
 document.querySelector("ul").onclick=function () {
 	if (event.target.nodeName=='LI') {
-	 event.target.classList.toggle('finish')
+	 event.target.classList.toggle('finish1')
 	}
 	if (event.target.nodeName=='IMG') {
 		event.target.parentElement.remove()
 	}
 }
+document.querySelector(".clear").onclick=function(){
+	document.querySelector("ul").innerHTML=""
+	
+}
+document.querySelector(".finish").onclick=function(){
+	let massiv=document.querySelectorAll("li")
+	for (var i = 0; i < massiv.length; i++) {
+		massiv[i].classList="finish1"
+	}
+}
+
+
+
